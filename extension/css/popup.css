@@ -3,7 +3,7 @@ body {
 }
 
 #popup {
-  min-width: 400px;
+  min-width: 10px;
   width: 400px;
   min-height: 10px;
   height: 200px;
@@ -14,3 +14,7 @@ body {
   user-select: none;
 }
 
+.popupSubmit{
+    margin-top: 70px;
+        margin-bottom: 50px
+}

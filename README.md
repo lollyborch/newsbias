@@ -1,4 +1,51 @@
-# newsbias
+# Who's News
+
+## Final report
+
+The final report for the Who's News prototype can be found on the [about page](https://deco3500.github.io/newsbias/about.html) of our prototype.  Our Github Page has been behaving inconsistently so the prototype and about page content are best viewed by downloading this Github repository and opening the files locally.
+
+### Promotional video
+
+Our [video can be viewed on You Tube](https://youtu.be/fGVuigW2Tww) or on our [about page](https://deco3500.github.io/newsbias/about.html).
+
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=fGVuigW2Tww
+" target="_blank"><img src="http://img.youtube.com/vi/fGVuigW2Tww/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
+## How to use the prototype
+
+### Search
+
+Search for an Australian newspaper (online or in print) using the search box on the [home page](https://deco3500.github.io/newsbias/index.html).  You can search for a name (e.g. Brisbane Times) or copy and paste a url of an article.
+
+### Fact Check
+Who's News Fact Check allows you to submit an article to be checked and assessed by our team of community leaders. Articles will be given a rating based on four weighted criteria which are independantly assessed by three members of the fact-checking team. 
+
+
+### Chrome Extension
+
+<ol>
+<li>Download this Github repository and unzip it.</li>
+<li>In Chrome, go the the Google Chrome Settings.</li>
+<li>On the side menu, click the extension tab.</li>
+<li>Tick the 'Developer mode' box.</li>
+<li>Click the 'Load unpacked extension' button and choose the folder 'newsbias'.</li>
+</ol>
+
+![Chrome Settings](https://raw.githubusercontent.com/deco3500/newsbias/master/IMG/Screen%20Shot%202016-10-30%20at%209.55.25%20am.png "Chrome Settings")
+
+You can now use the extension when viewing a news article on the web (like this one: https://theconversation.com/is-it-back-to-the-future-for-human-origins-science-or-just-a-case-of-science-media-misleading-us-again-63043), and click on the extension button.
+
+![Using the extension](https://raw.githubusercontent.com/deco3500/newsbias/master/IMG/Screen%20Shot%202016-10-30%20at%2010.10.50%20am.png "Using the extension")
+
+
+
+
+
+
+
+# Team News Bias Project Proposal
 
 ## 1. Introduction
 

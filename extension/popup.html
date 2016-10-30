@@ -1,40 +1,46 @@
 <!DOCTYPE html>
+<!-- Pop up created using https://www.youtube.com/watch?v=jyhu42WSC6Y&list=PLYxzS__5yYQlWil-vQ-y7NR902ovyq1Xi&index=1 -->
 <html ng-app="myApp" ng-csp>
-    <head>
-        <link rel="stylesheet" href="css/popup.css">
 
-        <!--<script src="js/lib/jquery-1.8.2.min.js"></script>-->
-        <script src="js/angular.js"></script>
-        <script src="js/angular_slider.js"></script>
-        <script src="../js/controller.js"></script>
-        
-    </head>
-    <body id="popup">
-        <header>
-            <h1>NewsBias Google extension</h1>
-        </header>
+<head>
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!--<script src="js/lib/jquery-1.8.2.min.js"></script>-->
+    <script src="js/angular.js"></script>
+    <script src="js/angular_slider.js"></script>
+    <script src="../js/controller.js"></script>
+    <title>Who's News</title>
+</head>
 
+<body id="popup">
+    <div class="w3-center w3-navbar navy"><img class="extLogo" src="../IMG/NewsBias.png" alt="News Bias Logo" /></div>
+    <div class="w3-container">
         <div ng-controller="newsBias">
-            <h2>Title: {{title}}</h2>
-            <div ng-repeat="news in urlToFilter | filter:searchQuery">
-                    <h3><b><i><u>Name:</u></i></b></h3>
-                    <h3>{{news.name}}</h3>
-                    <h3><b><i><u>Rating:</u></i></b></h3>
-                    <h3>{{news.averageRating}}/5</h3>
-                    <h3><b><i><u>Other company own by {{news.name}}:</u></i></b></h3>
-                    <h3>{{news.otherNews}}</h3>
-                    <h3><b><i><u>Other website own by {{news.name}}:</u></i></b></h3>
-                    <h3>{{news.otherOnline}}</h3>
-            </div> 
-
-
-            <ul>
-                <li ng-repeat="pageInfo in pageInfos">
-                    <div>{{pageInfo.url}}</div>
-                </li>                       
-            </ul>
+            <div class="w3-col s12">
+                <div ng-repeat="news in urlToFilter | filter:{url: searchQuery}">
+                    <h2 class="w3-text-cyan">{{news.name}}</h2>
+                    <p class="text-navy w3-margin-bottom">{{news.name}} is owned by <span style="font-weight:bold" class="w3-text-cyan">{{news.owner}}</span>. {{news.owner}} is a <span style="font-weight:bold" class="w3-text-cyan">{{news.type}}</span> based in <span style="font-weight:bold" class="w3-text-cyan">{{news.based}}</span>.</p>
+                    <p class="text-navy">CEO: {{news.CEO}}. Chairman: {{news.Chairman}}</p>
+                    <div class="w3-margin-top">
+                        <h3 class="w3-text-cyan">Trust rating</h3>
+                        <h4>{{news.name}}:  <span class="w3-text-cyan">{{news.averageRating}}/5</span></h4> <small class="w3-margin-bottom">Rate how much you trust {{news.name}} by dragging the slider between 1 and 5.</small>
+                        <rzslider rz-slider-model="slider.value" rz-slider-options="slider.options" id="myVote"></rzslider>
+                        <div class="popupSubmit">
+                            <input class="w3-btn-block margin-top-20 w3-round w3-lime" type="submit" name="submit" data-ng-click="biasVote($index);" value="Submit Vote" ng-class="{'w3-disabled' : submitVote == true}" /> </div>
+                    </div>
+                    <hr> </div>
+                <div ng-if="search_newsSites == 0">
+                    <div class="w3-row-padding">
+                        <div class="w3-col s12 w3-center">
+                            <p class="text-navy">No one voted on this website yet. Be the first one</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
-
-

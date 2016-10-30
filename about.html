@@ -1,148 +1,422 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-        <title>News Bias</title>
+<html lang="en">
 
-        <!--Stylesheets-->
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
-	    <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/w3.css">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Who's News - About</title>
+    <!--Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+    <!--Fonts-->
+    <!--Google Fonts - Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type='text/css'>
+    <!-- Font AWESOME for icons https://fortawesome.github.io/Font-Awesome/-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel='shortcut icon' href='extension/NewsBias.png' type='image/x-icon' />
+</head>
 
-        <!--Fonts-->
-        <!--Google Fonts - Roboto -->
-        
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type='text/css'>>
-        <link href='http://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
-	
-
-        <!-- Font AWESOME for icons https://fortawesome.github.io/Font-Awesome/-->
-            <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-
-    </head>
-    
 <body ng-app="myApp" ng-controller="newsBias">
-
-<!-- Navbar -->
+    <!-- Navbar -->
     <nav>
         <ul class="w3-navbar navy w3-card-2 w3-top w3-left-align w3-large">
-          <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-            <a class="w3-padding-large w3-hover-white w3-large navy" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-          </li>
-          <li><a href="#" class="navLogoContainer"><img class="navLogo" src="IMG/NewsBias.png" alt="News Bias Logo"/></a></li>
-          <li class="w3-hide-small"><a href="index.html" class="w3-padding-large w3-hover-white">Home</a></li>
-          <li class="w3-hide-small"><a href="factcheck.html" class="w3-padding-large w3-hover-white">Fact Check</a></li>
-          <li class="w3-hide-small"><a href="about.html" class="w3-padding-large w3-hover-white active-tab">About</a></li>
-         
+            <li class="w3-hide-medium w3-hide-large w3-opennav w3-right"> <a class="w3-padding-large w3-hover-white w3-large navy" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a> </li>
+            <li>
+                <a href="#" class="navLogoContainer" id="nohover"><img class="navLogo" src="IMG/NewsBias.png" alt="News Bias Logo" /></a>
+            </li>
+            <li class="w3-hide-small"><a href="index.html" class="w3-padding-large w3-hover-white">Home</a></li>
+            <li class="w3-hide-small w3-dropdown-hover"><a href="factcheck.html" class="w3-padding-large w3-hover-white">Fact Check <i class="fa fa-caret-down"></i></a>
+                <div class="w3-dropdown-content w3-white w3-card-4"> <a href="results.html">View all results</a> <a href="submit.html">Submit an article</a> <a href="apply.html">Apply to be a fact checker</a> </div>
+            </li>
+            <li class="w3-hide-small"><a href="about.html" class="w3-padding-large w3-hover-white active-tab">About</a></li>
+            <li class="w3-hide-small w3-right w3-dropdown-hover"><a class="w3-padding-large w3-hover-white" href="dashboard.html">My Dashboard <i class="fa fa-tachometer" aria-hidden="true"></i></a>
+                <div class="w3-dropdown-content w3-white w3-card-4"> <a href="login.html">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a> <a href="index.html">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a> </div>
+            </li>
         </ul>
-        </nav>
+    </nav>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:51px">
+        <ul class="w3-navbar w3-left-align w3-large navy">
+            <li> <a class="w3-padding-large" href="index.html">Home</a></li>
+            <li><a class="w3-padding-large" href="factcheck.html">Fact Check</a></li>
+            <li><a class="w3-padding-large" href="results.html">View all results</a></li>
+            <li><a class="w3-padding-large" href="submit.html">Submit an article</a></li>
+            <li><a class="w3-padding-large" href="apply.html">Apply to be a fact checker</a></li>
+            <li><a class="w3-padding-large" href="about.html">About</a></li>
+            <li><a class="w3-padding-large" href="dashboard.html">My Dashboard</a></li>
+            <li><a class="w3-padding-large" href="login.html">Login</a></li>
+        </ul>
+    </div>
+    <!-- Header -->
+    <div class="w3-container w3-section white w3-center">
+        <h1>About Who's News</h1> </div>
+    <div class="w3-container w3-center">
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/fGVuigW2Tww?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <hr>
+    <div class="columns3 w3-container w3-padding-jumbo">
+                
+                <ul class="searchResult text-navy">
+                    <li><a href="#">Introduction</a></li>
+                    <li><a href="#">Background</a>
+                        <ul class="searchResult w3-text-cyan">
+                            <li><a href="#">Problem space</a></li>
+                            <li><a href="#">Our approach</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Process</a></li>
+                    <ul class="searchResult w3-text-cyan">
+                            <li><a href="#">Initial concept</a></li>
+                            <li><a href="#">Framework</a></li>
+                        <li><a href="#">Inital UI</a></li>
+                        <li><a href="#">Chrome Extension Development</a></li>
+                        <li><a href="#">UI Progress</a></li>
+                        <li><a href="#">UX Testing: Round 1</a></li>
+                        <li><a href="#">UX Testing: Round 2</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Chrome Extension</a></li>
+                        <li><a href="#">Final Changes</a></li>
+                        </ul>
+                    <li><a href="#">References</a></li>                    
+                </ul>
+            </div>
     
+    <hr>
+    <div class="w3-container">
+        <div class="w3-row">
+            <div class="w3-col w3-twothird w3-padding-right text-navy">
+                <h2>Introduction</h2>
+               
+                <p class="w3-margin-bottom">Who's News is a web app that highlights ownership and key stakeholders of Australian newspapers and allows users to vote and view on a crowdsourced trust rating.   The app pairs with a Chrome Extension that displays the same information from within the site they are browsing.  Our Fact Check feature allows users to submit an article for review by our independent fact checkers.</p> 
+                <h2>Background</h2>
+                 <h3>Problem Space</h3>
+                <p class="w3-margin-bottom">It is contended that diversity in media ownership is an necessary component of a healthy democracy (Alderman, 2016; Pang, 2016; Vadori, 2016). Despite this, consider that:</p>
+                    <ul class="searchResult w3-margin-bottom">
+                        <li>In Australia, just two newspaper groups account for over 90% of daily newspapers in circulation (ACMA, 2016).</li>
+                        <li>Data published by the Australian Communications and Media Authority (ACMA) shows that 9 individuals hold the majority of media outlets in Australia (ACMA, 2016).</li>
+                        <li>Australia ranks just 25th on the world press freedom index (RSF, 2016).</li>
+                </ul>
+<p class="w3-margin-bottom">While media owners might not write the articles, the selection of senior editorial staff is often closely managed (McKnight, 2012). Illustrating this point, a 2006 survey of journalists concluded that the political and commercial agendas of their employers had influenced their conduct - almost 40% indicated they had been directly instructed to  ‘toe the commercial line’ while over 16% had been told to ‘take into account their employer’s political position’ (MEAA 2006). </p>
 
-<!-- Navbar on small screens -->
-<div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:51px">
-  <ul class="w3-navbar w3-left-align w3-large w3-black">
-    <li><a class="w3-padding-large" href="index.html">Home</a></li>
-    <li><a class="w3-padding-large" href="factcheck.html">Fact Check</a></li>
+<h3>Our Approach</h3>
+<p class="w3-margin-bottom">With the above statistics in mind, we looked to see what data was publicly available on media ownership in Australia (with a focus on print/online media). There are many reports, infographics and journals available, however most exist as “snapshots” at a point in time and are not updated. The only comprehensive, regularly-maintained resource we were able to find is a clickable, interactive “Media Interests Snapshot” map made freely available by the ACMA. 
+</p> 
+                <div class="w3-display-container w3-card-4 w3-margin-bottom">
+   <img src="report/01_ACMA.png" class="w3-image w3-border w3-padding">
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 1 - ACMA Media Interests Snapshot</p></div>
+</div>
+                <p class="w3-margin-bottom">While this data is useful, navigating starts from the top (i.e. owner level) and goes down; each clickable link opens a PDF file listing an owner’s media interests. This approach has limitations; for example, to find a specific publication like the Sydney Morning Herald, a user would already need to know that it is owned by Fairfax Group Limited.</p>
 
-    <li><a class="w3-padding-large" href="about.html">About</a></li>
-  </ul>
+
+                <p class="w3-margin-bottom">We saw an opportunity for a solution in this space, identifying 3 key areas to improve on ACMA’s existing resource:</p>
+
+
+<ul class="searchResult w3-margin-bottom">
+    <li>Accessibility - How to connect ownership data directly to a news article being read by an end user to help contextualise the problem</li>
+    <li>Presentation - How to present the data in a way that is relevant to the end user without overwhelming them</li>
+    <li>Engagement - How to engage end-users beyond simply presenting data</li>
+                </ul>
+
+
+
+
+<p class="w3-margin-bottom">Our web app, Who’s News, allows a user to quickly and easily find information about the news they consume. By searching an article URL or publication title, a user can find:</p>
+                <ul class="searchResult w3-margin-bottom">
+                    <li>The name of the outlet</li>
+                    <li>The controlling owner or corporation, as well as other outlets they own</li>
+                    <li>Key stakeholders</li>
+                    <li>A trust rating (which can be contributed to)</li>
+                    <li>A fact-check rating for the outlet (users can submit articles for fact checking/rating)</li>
+                </ul>
+                
+               
+            </div>
+            <div class="w3-col w3-third w3-margin-bottom">
+                <div class="w3-padding w3-border">
+                <h2 class="w3-text-cyan">User Guide</h2>
+                <h3>Search</h3>
+                <p class="w3-margin-bottom">Search for an Australian newspaper (online or in print) using the search box on the <a href="index.html">home page</a>. You can search for a name (e.g. Brisbane Times) or copy and paste a url of an article.</p>
+                <p class="w3-margin-bottom">Can't find the newspaper you're looking for? Our database currently only includes major Australian newspapers but we're adding to it regularly.</p>
+                <h3>Fact Check</h3>
+                <p class="w3-margin-bottom">Who's News Fact Check allows you to submit an article to be checked and assessed by our team of community leaders.</p>
+                <p class="w3-margin-bottom">Articles will be given a rating based on four weighted criteria which are independantly assessed by three members of the fact-checking team. </p>
+                <p class="w3-margin-bottom">Results will be given a grade (A to F) based on an average of the three fact checker ratings.</p> <p class="w3-margin-bottom">Find something interesting? Share the results of a fact check with your friends your the share to social media buttons. </p>
+                <h3>Chrome Extension</h3>
+                <ol class="w3-padding-left">
+                    <li><a href="https://github.com/deco3500/newsbias">Download our Github repository</a> and unzip it.</li>
+                    <li>In Chrome, go the the Google Chrome Settings.</li>
+                    <li>On the side menu, click the extension tab.</li>
+                    <li>Tick the 'Developer mode' box.</li>
+                    <li>Click the 'Load unpacked extension' button and choose the folder 'newsbias'.</li>
+                    <li>Go to a news article <a href="https://theconversation.com/is-it-back-to-the-future-for-human-origins-science-or-just-a-case-of-science-media-misleading-us-again-63043">like this one</a>, and click on the extension button.</li>
+                </ol>
+                    
+            </div>
+            <div class="w3-container w3-padding">
+        <h2>Current list of newspapers</h2>
+        <div ng-repeat="news in newsSites">
+            <ul class="searchResult">
+                <li>{{news.name}}</li>
+            </ul>
+        </div>
+    </div>
+                </div>
+        </div>
+    </div>
+    <hr>
+     <div class="w3-container">
+        <div class="w3-row">
+            <div class="w3-col w3-twothird w3-padding-right text-navy">
+            <h2>Process</h2>    
+            <h3>Initial Concept</h3>
+                <p class="w3-margin-bottom">Image 2 is the idea in it’s initial conception. The first idea for the landing page was a simple search interface (not dissimilar to Google) with a large search bar centered on the page. After the first pitch, it was suggested that a Chrome extension would be a natural/useful accompaniment to the web app. We commenced development of an extension to be paired with the app, integrating with any news site that exists in our database.
+</p>
+                <h3>Framework</h3>
+                <p class="w3-margin-bottom">To begin we chose the W3.CSS (http://www.w3schools.com/w3css/default.asp) framework to provide a responsive, grid layout.  It is a simple, CSS-only, light framework that gave us the basic layout and styles to build our prototype on.  This framework also enabled us to create a mobile-first design.  AngularJS was used to provide dynamic data throughout the prototype.  It provides a basis for the main functions including search and the fact check results. 
+</p>
+                <h3>Initial UI</h3>
+                <p class="w3-margin-bottom">We liked the colour choices and contrasts in our first UI, but agreed it would benefit from imagery. For inspiration, we gathered a selection of images that reflected themes within the problem space, seen in image 4. 
+We liked the idea of the media “control room”; silhouetted figures, dark lighting, an underlying theme of control/manipulation, etc. See the top row for examples, as well as the image that was used (under Creative Commons) as the cover for our prototype.</p>
+                <h3>Chrome Extension Development</h3>
+                <p class="w3-margin-bottom">We commenced development of the Chrome extension - image 5 shows some early shots of the process, from our first “Hello World”, through to initial integration with the AngularJS controller.</p>
+                <h3>UI Progress</h3>
+                <p class="w3-margin-bottom">Image 6 shows the homepage in mid September (ahead of Stand Up #1) with our cover image and logo in place. Most of the time spent at this stage was on the design, and coding the search bar to accept a variety of inputs (using AngularJS), including a publication title or direct article URL. 
+Effort was concentrated on the code for URL parsing as we wanted to ensure we could reliably retrieve the hostname from any URL format submitted.</p>
+                <h3>UX Testing: Round 1</h3>
+                <p class="w3-margin-bottom">Following the first Stand Up, we developed our first search result/trust rating page. To keep the prototype simple, we chose to store results in JSON format within our controller.js rather than implementing a real database at the back end. We created two variants of the trust rating to take to users and test preferences.
+                </p>
+                
+                        <div class="w3-display-container w3-card-4 w3-margin-bottom">
+   <img src="report/07_trustratingAB.png" class="w3-image w3-border w3-padding">
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 7 - Search Results for Stand Up #2 / UX Test 1
+</p></div>
+</div>
+                <p class="w3-margin-bottom">With these elements developed, we conducted our first round of UX testing ahead of Stand Up #2. The testing involved semi-structured, one-on-one interviews with participants who were asked to perform a series of tasks. Outcomes from testing/Stand Up #2:</p>
+                <ul class="searchResult w3-margin-bottom">
+                    <li>The purpose of the site was clear to all users</li>
+                    <li>Some users expected the search bar to behave like Google (one user typed the title of the article in) - we added more helper text in so it was clearer what terms could be searched</li>
+                    <li>Red colour was described as “alarming”, was suggested we use less or change altogether</li>
+                    <li>We asked users to evaluate designs 1A and 1B for the trust rating (image 8); 1A was preferred</li>
+                </ul>
+                        <!--<div class="w3-display-container w3-card-4 w3-margin-bottom">
+                            <div class="w3-row">
+                                <div class="w3-col w3-half w3-padding-right">
+                                    <img src="report/08_TRA.png" class="w3-image w3-border w3-padding">
+                                </div>
+                                <div class="w3-col w3-half">
+                                    <img src="report/08_TRB.png" class="w3-image w3-border w3-padding">
+                                </div>
+                            </div>
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 8 - A/B Trust Rating
+
+</p></div>
+</div>-->
+                <p class="searchResult w3-margin-bottom">We had not intended for the red colour to create a negative visceral response, so we replaced it with a combination of more neutral colours (green and blue) while maintaining the contrast we had originally sought to create.</p>
+
+               <h3>UX Testing: Round 2</h3>
+                <p class="w3-margin-bottom">
+                    Ahead of Stand Up #3, we developed four components for the Fact Checking feature and conducted another round of user tests on each one (homepage, view results, submit an article, apply to be a fact checker).
+                </p>
+                
+                <p class="w3-margin-bottom">Outcomes following the user testing and Stand Up #3 feedback:</p>
+                 <ul class="searchResult w3-margin-bottom">
+                     <li>Incorporated latest results onto the Fact Check homepage. User suggested front loading selection of recent content to give the Fact Check homepage more functionality.</li>
+                     <li>Added more info on Fact Check process to About page</li>
+                     <li>Changed the colour for the ‘C’ grade from grey to a brighter colour to be in keeping with the other grade colours. This was a user suggestion.</li>
+                     <li>Added pop-up confirmation for Submit and Apply forms with follow up email for Apply form.</li>
+</ul>
+                
+                
+                <div class="w3-display-container w3-card-4 w3-margin-bottom">
+                            <div class="w3-row">
+                                <div class="w3-col w3-half w3-padding-right">
+                                    <img src="report/11_FCHomepage_final.png" class="w3-image w3-border w3-padding">
+                                </div>
+                                <div class="w3-col w3-half">
+                                    <img src="report/11_FCResultsFinal.png" class="w3-image w3-border w3-padding">
+                                </div>
+                            </div>
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 11 - Fact Checking Homepage / Results following incorporated changes
+</p></div>
 </div>
 
-<!-- Header -->
-<div class="w3-container w3-section white w3-center w3-padding-top-64">
-  <h1>About the site</h1>
+                <h3>Login</h3>
+                <p class="w3-margin-bottom">In the final weeks of the project, we built a Fact Checker dashboard (with dummy Login page). This is a back-end area of the site where Fact Checkers can log in and see which articles are available for Fact Checking.
+                </p>
+                <h3>Chrome Extension</h3>
+                <p class="w3-margin-bottom">We also finalised the Chrome Extension, condensing the results down into a more appropriate, condensed format. The icon becomes available when an indexed site is visited, ensuring users won’t try to use the extension on a site missing from the database.
+
+                </p>
+                <h3>Final Changes</h3>
+                <p class="w3-margin-bottom">
+                    We made small tweaks to the design of the search result page, changing heading colours and reformatting the related results. We also worked to make the Search functionality more robust (following a slightly embarrassing test with the tutors).
+                </p>
+                <p class="w3-margin-bottom">
+                    Finally, we made slight changes to the site homepage, adding a list of supported sites (following feedback from the prototype demonstration), instructions for use and some detail around the Fact Check features.
+                </p>
+                <div class="w3-display-container w3-card-4 w3-margin-bottom">
+   <img src="report/15_FinalHomepage.png" class="w3-image w3-border w3-padding">
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 15 - Final Home Page.
+
+
+</p></div>
 </div>
-
-<div class="w3-container">
-  <h2>Background</h2>
-  <p>Wn March 2016, the Government tabled changes to media ownership rules set out in the Broadcasting Services Act 1992 (Cth). The changes proposed to repeal the “2/3 cross media ownership” and “75% reach” rules respectively, citing a need for “traditional” platforms (Commercial Television/Radio, most Newspapers), to have greater flexibility to respond to increased pressure from “new” forms of media (i.e. online) (Foreman & Jordan, 2016). </p>
-
-Although these changes do not specifically apply to online publications, they reinforce the ever-evolving landscape of media ownership in Australia. Data published by the Australian Communications and Media Authority (ACMA) show that 9 individuals hold the majority of media outlets in Australia (ACMA, 2016). The selection of senior editorial staff is often closely managed (McKnight, 2012), and accusations of bias are not uncommon given the numerous private interests the owners hold (Hobbs, 2016), (AIM Editorial, 2014). </p>
-
-While the data provided by the ACMA is useful, it lacks granularity and is only available from a “top-down” perspective. There is no functionality for a user who wants to interrogate a specific publication or website (i.e. search from the “bottom-up”). The fragmented nature of digital publications serves to broaden the gap between the data on media ownership and the articles themselves. </p>
-
-Our app will connect the available information directly with the article being read; a consumer can draw their own informed conclusion as to the presence of bias. Presenting the information at the point of delivery will bridge the disconnect between an article and the ownership / editorial structure underpinning it's authorship.
-</p>.
+            </div>
+            
+             <div class="w3-col w3-third w3-padding">
+                 <div class="w3-display-container w3-card-4 w3-margin-bottom">
+   <img src="report/02_Idea.png" class="w3-image w3-border w3-padding">
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 2 - “Project Idea” submission</p></div>
 </div>
-<hr>
-
-<div class="w3-container">
-  <h2>Introduction</h2>
-  <p>Who's News is a web app that will highlight ownership, key stakeholders, reach, and a crowdsourced trust rating for news web sites that users search for. The app pairs with a Chrome extension that detects and notifies a user when they browse a site within the app's database.
-
-There are two main components to the web app: Search/Ownership Profile and Fact Check.</p>
+                 <div class="w3-display-container w3-card-4 w3-margin-bottom">
+   <img src="report/03_FirstUILeo.jpg" class="w3-image w3-border w3-padding">
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 3 - First UI developed</p></div>
 </div>
-<hr>
-
-<div class="w3-container">
-  <h2> Search / Ownership Profile</h2>
-  <p></p>
+                  <div class="w3-display-container w3-card-4 w3-margin-bottom">
+   <img src="report/04_ImageResearch.png" class="w3-image w3-border w3-padding">
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 4 - Collection of images gathered for research</p></div>
 </div>
-<hr>
+                 <div class="w3-display-container w3-card-4 w3-margin-bottom">
+   <img src="report/05_Extension.png" class="w3-image w3-border w3-padding">
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 5 - Early development of Chrome Extension</p></div>
+</div>
+                 <div class="w3-display-container w3-card-4 w3-margin-bottom">
+   <img src="report/06_HomepageSU1.jpg" class="w3-image w3-border w3-padding">
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 6 - Homepage for Stand Up #1
+</p></div>
+</div>
+                 <div class="w3-display-container w3-card-4 w3-margin-bottom">
+                            <div class="w3-row">
+                                <div class="w3-col w3-half w3-padding-right">
+                                    <img src="report/08_TRA.png" class="w3-image w3-border w3-padding">
+                                </div>
+                                <div class="w3-col w3-half">
+                                    <img src="report/08_TRB.png" class="w3-image w3-border w3-padding">
+                                </div>
+                            </div>
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 8 - A/B Trust Rating
 
-<article class="w3-container">
-  <h2>Fact Check</h2>
-  <p></p>
-</article>
-<hr>
+</p></div>
+</div>
+                 <div class="w3-display-container w3-card-4 w3-margin-bottom">
+   <img src="report/09_colour.png" class="w3-image w3-border w3-padding">
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 9 - Changing colour palate
+</p></div>
+</div>
+                 <div class="w3-display-container w3-card-4 w3-margin-bottom">
+   <img src="report/10_Combined.png" class="w3-image w3-border w3-padding">
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 10 - Fact Checking prior to UX test #2</p></div>
+</div>
+                 <div class="w3-display-container w3-card-4 w3-margin-bottom">
+   <img src="report/12_FCLogin.png" class="w3-image w3-border w3-padding">
+                     <img src="report/12_FCDashboard.png" class="w3-image w3-border w3-padding">
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 12 - Fact Checker Login / Dashboard
+</p></div>
+</div>
+                 <div class="w3-display-container w3-card-4 w3-margin-bottom">
+   <img src="report/13_Combined.png" class="w3-image w3-border w3-padding">
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 13 - Final evolution of Chrome Extension. Image on right is the final version.
+</p></div>
+</div>
+                 <div class="w3-display-container w3-card-4 w3-margin-bottom">
+   <img src="report/14_FinalSearchResults.png" class="w3-image w3-border w3-padding">
+                    <div class="w3-container w3-padding w3-border">
+                        <p class="w3-center w3-medium">Image 14 - Final search results.
 
-<section class="w3-container">
-  <h2>Stretch goals</h2>
-  <p></p>
-</section>
-<hr>
-
-<section class="w3-container">
-  <h2>Audience</h2>
-  <p></p>
-</section>
-<hr>
-
-<section class="w3-container">
-  <h2>Points of Differentiation</h2>
-  <p></p>
-</section>
-<hr>
+</p></div>
+</div>
+                 
+                 
+                 
+                 
+         </div>
+    </div>
+    </div>
+    
+    <hr>
+    <div class="w3-container">
+        <div class="w3-row">
+            <div class="w3-col text-navy">
+                <h2>References</h2>
 
 
+<p class="w3-margin-bottom">ACMA. (2016). 'Media Interests' snapshot | ACMA. Acma.gov.au. Retrieved 4 September 2016, from http://acma.gov.au/theACMA/media-interests-snapshot</p>
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center navy">
-  <div class="w3-xlarge w3-padding-24">
-    <p>Copyright 2016 Team News Bias</p>
 
- </div>
- <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
+<p class="w3-margin-bottom">AIM Editorial. (2014). Democracy and diversity: media ownership in Australia. The AIM Network. Retrieved from http://theaimn.com/democracy-diversity-media-ownership-australia/</p>
 
+
+<p class="w3-margin-bottom">Alderman, Susan. (2016). Democracy & Diversity: Media Ownership. Retrieved 30 October 2016, from https://susanalderman.wordpress.com/2016/03/30/media-ownership/</p>
+
+
+<p class="w3-margin-bottom">Foreman, A. & Jordan, K. (2016). Government announces media ownership law changes. Claytonutz.com. Retrieved from https://www.claytonutz.com/knowledge/2016/march/government-announces-media-ownership-law-changes</p>
+
+
+<p class="w3-margin-bottom">Hobbs, M. (2016). Kick this mob out: The Murdoch media and the Australian Labor Government (2007 to 2013). Global Media Journal Australian Edition, 10(1). Retrieved from *http://www.hca.westernsydney.edu.au/gmjau/?p=1075</p>
+
+
+<p class="w3-margin-bottom">McKnight, D. (2012). Gina Rinehart and Rupert Murdoch: a study of power in the media. Theconversation.com. Retrieved 5 September 2016, from http://theconversation.com/gina-rinehart-and-rupert-murdoch-a-study-of-power-in-the-media-5394</p>
+
+
+<p class="w3-margin-bottom">MEAA (2006). The Media Muzzled: Australia’s 2006 Press Freedom Report. Sydney: Media Entertainment and Arts Alliance.</p>
+
+
+<p class="w3-margin-bottom">Pang, Lawrence (2016). Who Owns the News? - The Reckoner. Retrieved 25 October 2016, from *http://thereckoner.ca/who-owns-the-news/</p>   
+
+
+<p class="w3-margin-bottom">RSF (2016). World Press Freedom Index, Reporters Without Borders retrieved 05 October, from *https://rsf.org/en/ranking</p> 
+
+
+<p class="w3-margin-bottom">Vadori, David (2014). Democracy and Diversity: Media Ownership in Australia - Wattpad.  Retrieved 26 October 2016, from https://www.wattpad.com/53754253-democracy-and-diversity-media-ownership-in</p>
+
+            </div>
+        </div>
+    </div>
+    
+   
+   
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-32 w3-center navy">
+        <p>Copyright 2016 Team News Bias</p>
+    </footer>
     <script>
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function myFunction() {
-        var x = document.getElementById("navDemo");
-        if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-        } else {
-            x.className = x.className.replace(" w3-show", "");
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            }
+            else {
+                x.className = x.className.replace(" w3-show", "");
+            }
         }
-    }
     </script>
-!-- jQuery -->
-    
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script   src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
     <!-- AngularJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
     <!--controllers -->
     <script src="js/controller.js"></script>
     <!--Angular slider from https://github.com/angular-slider/angularjs-slider-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/5.4.0/rzslider.min.js"></script>
-    <!--jquery scroll to -->
-    <script src="http://cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
-    
 </body>
-</html>
 
+</html>

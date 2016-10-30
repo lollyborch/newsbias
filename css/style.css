@@ -1,9 +1,4 @@
-
-@font-face {
-    font-family: "Intro-r";
-    src: url("INTRO.OTF") format("opentype");
-}
-
+/* Intro font from http://www.fontfabric.com/intro-free-font/ */
 @font-face {
     font-family: 'Intro';
     src:url('../fonts/Intro.ttf.woff') format('woff'),
@@ -30,27 +25,59 @@ h5,h6, body, .w3-navbar,button {
     font-family: 'Roboto', sans-serif;
 }
 
-.formCenter{
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 20px;
+ol {
+    list-style-type: circle !important;
 }
 
-.totalHeight {
-    max-height:100vh;
-    min-height:385px;
+.card-height-115{
+    min-height: 115px;
 }
 
-.highlight {
-    color: #ff6363;
+.columns {
+  -webkit-columns: 4 150px;
+  -moz-columns: 4 150px;
+  columns: 4 150px;
+  -webkit-column-gap: 2em;
+  -moz-column-gap: 2em;
+  column-gap: 2em;
+  
+}
+
+.columns3 {
+  -webkit-columns: 3 150px;
+  -moz-columns: 3 150px;
+  columns: 3 150px;
+  -webkit-column-gap: 2em;
+  -moz-column-gap: 2em;
+  column-gap: 2em;
+  
+}
+
+.columnHeader {  
+  -webkit-column-span: all;
+  -moz-column-span: all;
+  column-span: all;
+}
+
+.rzslider .rz-pointer {
+    background-color: #cddc39 !important;
+}
+
+.rzslider .rz-ticks .rz-tick .rz-tick-value {
+    top: -35px !important;
+}
+
+.rz-tick-legend {
+    line-height: 20px !important;
 }
 
 .margin-top-60{
     margin-top: 60px;
 }
 
-.rzslider .rz-pointer {
-    background-color: #cddc39 !important;
+.margin-top-20-btm-10{
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .rating {
@@ -89,19 +116,9 @@ h5,h6, body, .w3-navbar,button {
 .clear {
     clear:both;
 }
-/*body
-{
-	margin-top: 0px;
-	background-color: white;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-	min-width:700px;
-}*/
 
 #submit
 {
-	
 	color: #764b8e;
 	font-size: 1em;
 	border-radius: 6px;
@@ -116,16 +133,6 @@ h5,h6, body, .w3-navbar,button {
   
 }
 
-
-header
-{
-	background-color: #082644;
-	width:100%;
-	/*height: 70px;*/
-	box-shadow: 0px 5px 50px #5E5E5E;
-	padding-bottom: 5px;
-}
-
 .nav img
 {
 	float: left;
@@ -138,6 +145,11 @@ header
 .navLogoContainer {
     width: 130px;
 }
+.navLogoContainer:hover {
+    
+    background-color: transparent !important; 
+    border-bottom: none !important; 
+}
 .navLogo {
     float: left;
     height: 30px;
@@ -146,21 +158,6 @@ header
     height: auto;
 }
 
-
-
-
-/*main body*/
-
-.main
-{
-	width: 66%;
-	height: 350px;
-	margin: 60px 16.66% 0 16.66%;
-	font-family: verdana;
-	background-color: white;
-	
-
-}
 .headerImage {
     background: url(../IMG/cover_image.jpg) no-repeat center center fixed; 
       -webkit-background-size: cover;
@@ -169,52 +166,14 @@ header
       background-size: cover;
 }
 
-/* Image from https://www.flickr.com/photos/esthervargasc/14209650919/ */
+/* Image by Esther Vargas from https://www.flickr.com/photos/esthervargasc/14209650919/ */
 
-.main h1
-{
-    font-family: Intro-r;
-	text-align: center;
-	margin-top: 20px;
-	font-size: 85px;
-}
-
-.main h2
-{
-	font-family:Intro-r;
-	text-align:left;
-	font-size:1.5em;
-}
-
-.main h3
-{
-	font-family:arial;
-	font-weight:bolder;
-    padding-top:10px;
-    margin-top:10px;
-}
-
-.introSub
-{
-	font-family: Intro-r;
-	font-size: 23.5px;
-	margin-bottom: 50px;
-	text-align: center;
-}
 
 #form{
 	text-align: center;
 	background-color: white;
 }
 
-/*input[type=text]
-{
-	background-color: #082644;
-	border: 0;
-	border-radius:10px;
-	font-family: "Century Gothic";
-	color: #FFFFFF;
-}*/
 .sourceIn
 {
 	width: 100%;
@@ -223,20 +182,3 @@ header
 	text-indent: 10px;
 	
 }
-
-
-
-/*footer*/
-
-/*footer
-{
-	background-color: #082644;
-	height: 40px;
-	text-align: right;
-	font-family: "Times New Roman", Georgia, Serif;
-	color: #FFFFFF;
-	padding-top: 30px;
-	padding-right: 10px;
-	min-height:60px;
-	margin-top:20%;
-}*/
